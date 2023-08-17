@@ -1,0 +1,19 @@
+<h1>Lists#index</h1>
+<p>Find me in app/views/lists/index.html.erb</p>
+
+<div class="d-flex-colum ">
+<h1>Lists</h1>
+<div class="d-flex justify-cotnent-center">
+<ul>
+<% @lists.each do |list| %>
+<li class= "p-2">
+<h2><%= link_to list.name, list_path(list) %> </h2>
+<span class="badge badge-primary badge-pill">2</span>
+</li>
+<% end %>
+</ul>
+<button type="button" class="btn-success ">
+<%= link_to "Add List", new_list_path %>
+</button>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<h1>Lists#show</h1>
+<div class="container">
+<h1><% @list.name %></h1>
+<h2><%= @list.name  %></h2>
+<% list = @list.bookmarks %>
+<p><% list.each do |bookmark| %>
+<% bookmark %>
+<%= bookmark.movie %>
+<%= bookmark.comment %>
+<% end %> </p>
+
+</div>
+<div class="card">
+  <button type="button" class="btn btn-success ">
+         <%= link_to "Retour", root_path %>
+         </button>
+
+         </button>
+             <button type="button" class="btn btn-success ">
+         <%= link_to "add bookmark", new_list_bookmark_path(@list) %>
+         </button>
+</div>
